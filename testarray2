@@ -1,0 +1,19 @@
+class student
+{
+int rno;
+String name;
+void insert(int r,String n){
+rno=r;
+name=n;
+}
+void display(){
+System.out.println(rno+"\n"+name);
+}
+}
+class testarray2{
+public static void main(String arg[]){
+student s1=new student();
+s1.insert(52,"mounika");
+s1.display();
+}
+}
