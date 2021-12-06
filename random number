@@ -1,0 +1,6 @@
+import java.lang.Math;
+class Random{
+public static void main(String arg[]){
+System.out.println(Math.random());
+int r=(int)Math.floor(Math.random()*(100-50+1)+50);
+System.out.println(r);}}
