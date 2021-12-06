@@ -1,0 +1,6 @@
+import java.lang.Matheg;
+class Math{
+public static void main(String arg[]){
+System.out.println(Math.exp(0));
+}
+}
