@@ -1,0 +1,41 @@
+import java.util.Scanner;
+class student{
+public String name;
+public int roll;
+public void insert(String name,int r){
+this.name=name;
+this.roll=r;
+}
+public void display(){
+System.out.println(name+"\t"+roll);
+}
+}
+class details{
+public static void main(String arg[])
+{
+int n,r=0;
+String name=null;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n;");
+n=sc.nextInt();
+student[] s=new student[n];
+for(int i=0;i<n;i++)
+{
+s[i]=new student();
+
+}
+
+for(int i=0;i<n;i++)
+{
+System.out.println("enter name and Rollno");
+name=sc.next();
+r=sc.nextInt();
+for(int j=0;j<i+1;j++){
+s[i].insert(name,r);
+}
+}
+System.out.println("details are:");
+for(int i=0;i<n;i++){
+s[i].display();
+}
+}
