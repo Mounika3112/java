@@ -1,0 +1,20 @@
+class Demo{
+public static void main(String arg[]){
+int op1=Integer.parseInt(arg[0]);
+int op2=Integer.parseInt(arg[1]);
+char operator=arg[2].charAt(0);
+System.out.println(arg[0]+arg[2]+arg[1]+"=");
+switch(operator){
+case('+'):
+System.out.println(op1+op2);break;
+case('-'):
+System.out.println(Math.abs(op1-op2));break;
+case('*'):
+System.out.println(op1*op2);break;
+case('/'):
+System.out.println(op1/op2);break;
+default:
+System.out.println("invalid operator selected" );
+}
+}
+}
