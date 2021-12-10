@@ -1,0 +1,63 @@
+import java.util.Scanner;
+class Employee{
+String name;
+int id;
+float salary;
+int hours;
+public void getinfo(String name,int id,float salary,int hours)
+{
+this.name=name;
+this.id=id;
+this.salary=salary;
+this.hours=hours;
+}
+public void addsal(){
+if(salary<500)
+{
+salary=salary+10;
+}
+}
+public void addwork(){
+if(hours>6)
+{
+salary=salary+5;
+}
+}
+public void display(){
+System.out.println("final salary:-");
+System.out.println(salary);
+}
+}
+class EmployeeDetails{
+public static void main(String arg[])
+{
+int n,i,id=0,hours=0;
+float salary=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n:");
+n=sc.nextInt();
+Employee[] obj=new Employee[n];
+for(i=0;i<n;i++) 
+{
+obj[i]=new Employee();
+}
+for(i=0;i<n;i++)
+{
+System.out.println("enter name and id and salary and hours:");
+String name=sc.next();
+id=sc.nextInt();
+salary=sc.nextFloat();
+hours=sc.nextInt();
+}
+for(i=0;i<n;i++)
+{
+obj[i].getinfo(name,id,salary,hours);
+obj[i].addsal();
+obj[i].addwork();
+}
+for(i=0;i<n;i++)
+{
+obj[i].display();
+}
+}
+}
