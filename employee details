@@ -47,7 +47,7 @@ salary=sc.nextFloat();
 hours=sc.nextInt();
 obj[i].getInfo(name,id,salary,hours);
 obj[i].Addsal();
-obj[i].Addsal();
+obj[i].Addwork();
 obj[i].display();
 }
 }
