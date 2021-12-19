@@ -1,0 +1,32 @@
+class Main{
+    int h;
+    int m;
+    int s;
+    Main(int hh)
+    {
+        h=hh;
+    }
+    Main(int hh,int mm)
+    {
+        h=hh;
+        m=mm;
+    }
+    Main(int hh,int mm,int ss)
+    {
+        h=hh;
+        m=mm;
+        s=ss;
+    }
+    void display(){
+        System.out.println(h+"hrs:"+m+"min:"+s+"sec");
+    }
+    public static void main(String arg[])
+    {
+        Main s1=new Main(4);
+        Main s2=new Main(4,3);
+        Main s3=new Main(4,3,2);
+        s1.display();
+        s2.display();
+        s3.display();
+    }
+}
