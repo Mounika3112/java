@@ -1,0 +1,58 @@
+import java.util.*;
+class Student
+{
+    String name;
+    int rno;
+    void readstudent(String name,int rno)
+    {
+        this.name=name;
+        this.rno=rno;
+        System.out.println(name+" "+rno);
+    }
+}
+class Test extends Student
+{
+float s1,s2,s3,s4,s5,s6;
+void readmarks(float s1,float s2,float s3,float s4,float s5,float s6)
+{
+    this.s1=s1;
+    this.s2=s2;
+    this.s3=s3;
+    this.s4=s4;
+    this.s5=s5;
+    this.s6=s6;
+}
+}
+class Main extends Test
+{
+float total;
+void result()
+{
+    total=s1+s2+s3+s4+s5+s6;
+    System.out.println("total marks are"+total);
+}
+public static void main(String arg[])
+{
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter no.of students:");
+    int n=sc.nextInt();
+    Main[] obj=new Main[n];
+    for(int i=0;i<n;i++)
+    {
+        obj[i]=new Main();
+        System.out.println("enter name and rno of student;");
+        String name=sc.next();
+        int rno=sc.nextInt();
+        System.out.println("enter all 6 subjects marks of student:");
+        float s1=sc.nextFloat();
+        float s2=sc.nextFloat();
+        float s3=sc.nextFloat();
+        float s4=sc.nextFloat();
+        float s5=sc.nextFloat();
+        float s6=sc.nextFloat();
+        obj[i].readstudent(name,rno);
+        obj[i].readmarks(s1,s2,s3,s4,s5, s6);
+        obj[i].result();
+    }
+}
+}
