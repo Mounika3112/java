@@ -1,0 +1,59 @@
+import java.util.*;
+class Employee
+{
+String name,designation;
+int id;
+void reademp(String name,String designation,int id)
+{
+this.name=name;
+this.designation=designation;
+this.id=id;
+System.out.println(name+" "+designation+" "+id);
+}
+}
+class Salary extends Employee
+{
+float bp,hra,da,pf,np;
+void readsalary(float bp,float hra,float da,float pf)
+{
+this.bp=bp;
+this.hra=hra;
+this.da=da;
+this.pf=pf;
+}
+void calculatesalary()
+{
+np=(bp+hra+da)-pf;
+}
+void displayemp()
+{
+System.out.println("total salary:"+np);
+}
+public static void main(String arg[])
+{
+int i;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter n:");
+int n=sc.nextInt();
+Salary[] obj=new Salary[n];
+for(i=0;i<n;i++)
+{
+obj[i]=new Salary();
+System.out.println("enter name:");
+String name=sc.next();
+System.out.println("enter designation:");
+String designation=sc.next();
+System.out.println("enter id:");
+int id=sc.nextInt();
+System.out.println("enter bp,hra,da,pf:");
+float bp=sc.nextFloat();
+float hra=sc.nextFloat();
+float da=sc.nextFloat();
+float pf=sc.nextFloat();
+obj[i].reademp(name,designation,id);
+obj[i].readsalary(bp,hra,da,pf);
+obj[i].calculatesalary();
+obj[i].displayemp();
+}
+}
+}
