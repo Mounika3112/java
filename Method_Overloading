@@ -1,0 +1,32 @@
+class MethodOverloading
+{
+int l,b,area;
+void area(int x,int y)
+{
+l=x;
+b=y;
+area=l*b;
+System.out.println("area="+area);
+}
+void area(int x)
+{
+l=x;
+b=0;
+area=l*b;
+System.out.println("area="+area);
+}
+void area()
+{
+l=0;
+b=0;
+area=l*b;
+System.out.println("area="+area);
+}
+public static void main(String arg[])
+{
+MethodOverloading obj=new MethodOverloading();
+obj.area(8,4);
+obj.area(7);
+obj.area();
+}
+}
