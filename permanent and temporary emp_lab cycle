@@ -1,0 +1,58 @@
+import java.util.*;
+class Employept
+{
+String name;
+int id;
+double salary;
+void read_emp(String name,int id,double salry)
+{
+this.name=name;
+this.id=id;
+this.salary=salary;
+}
+}
+class Permanant_employe extends Employept
+{
+void print_emp(double salary)
+{
+salary=salary+(salary*(3.5/100));
+System.out.println(name);
+System.out.println(id);
+System.out.println(salary);
+}
+}
+class Temporary_employe extends Employept
+{
+void print_emp(double salary)
+{
+salary=salary+(salary*(5.0/100));
+System.out.println(name);
+System.out.println(id);
+System.out.println(salary);
+}
+}
+class Main
+{
+public static void main(String arg[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter name id salary of employee:");
+String name=sc.next();
+int id=sc.nextInt();
+double salary=sc.nextDouble();
+System.out.println("enter 0:-permanant_emp or 1:-temporary_emp:");
+int c=sc.nextInt();
+if(c==0)
+{
+Permanant_employe  obj=new  Permanant_employe();
+obj.read_emp(name,id,salary);
+obj.print_emp(salary);
+}
+if(c==1)
+{
+Temporary_employe  obj=new  Temporary_employe();
+obj.read_emp(name,id,salary);
+obj.print_emp(salary);
+}
+}
+}
