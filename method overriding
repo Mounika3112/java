@@ -1,0 +1,42 @@
+import java.util.*;
+class Figure
+{
+int d1,d2;
+void read()
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter d1 and d2:");
+d1=sc.nextInt();
+d2=sc.nextInt();
+}
+void area()
+{
+System.out.println("area is derived in subclass:");
+}
+}
+class Rectangle extends Figure
+{
+void area()
+{
+System.out.println("area of rectangle is:"+d1*d2);
+}
+}
+class Triangle extends Figure
+{
+void area()
+{
+System.out.println("area of triangle is:"+0.5*d1*d2);
+}
+}
+class MethodOverriding
+{
+public static void main(String arg[])
+{
+Rectangle r=new Rectangle();
+r.read();
+r.area();
+Triangle t=new Triangle();
+t.read();
+t.area();
+}
+}
