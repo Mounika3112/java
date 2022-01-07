@@ -1,0 +1,69 @@
+import java.util.*;
+interface Student
+{
+    int sno;
+    String sname,classs;
+    void getvalue();
+}
+interface Departmemt
+{
+    float attendence;
+    void getattendence();
+}
+class Exam implements Student,Department
+{
+    int n,i,sno;
+    String sname,classs;
+    float attendence;
+    void display(int sno,String sname,String classs,int attendence)
+    {
+        this.sno=sno;
+        this.sname=sname;
+        this.classs=classs;
+        this.attendence=attendence;
+    }
+    public void getvalue()
+    {
+        System.out.println(sno+" "+sname+" "+classs);
+    }
+    public void getattendence()
+    {
+        System.out.println(attendence);
+    }
+    void calattendence()
+    {
+        if(attendence>75)
+        return 1;
+    }
+    void eligible()
+    {
+        int c;
+        c=calattendence();
+        if(c==1)
+        {
+            System.out.println("ELIGIBLE");
+        }
+        System.out.println("NOT ELIGIBLE");
+    }
+    public static void main(String arg[])
+    {
+        Scanner sc=new Sanner(System.in);
+        System.out.println("enter n:");
+        n=sc.nextInt();
+        Exam[] obj=new Exam[n];
+        for(i=0;i<n;i++)
+        {
+          obj[i]=new Exam();
+          System.out.println("enter sno sname class attendence:");
+          sno=sc.nextInt();
+          sname=sc.next();
+          class=sc.next();
+          attendence=sc.nextFloat();
+          obj[i].display(sno,sname,classs,attendence)
+          obj[i].getvalue();
+          obj[i].getattendence();
+          obj[i].calattendence();
+          obj[i].eligible();
+        }
+    }
+}
