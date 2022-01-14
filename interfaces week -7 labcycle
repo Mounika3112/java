@@ -1,0 +1,54 @@
+import java.util.*;
+interface Students
+{
+    int sno=52;
+    String sname="mounika";
+    String classs="btech";
+    void getvalue();
+}
+class Department implements Students
+{
+    float attendence;
+    public void getattendence()
+    {
+        Scanner sc=new Scanner(System.in);
+		System.out.print("Enter Attendance: ");
+		attendence=sc.nextFloat();
+    }
+    public void getvalue()
+    {
+        System.out.println("student no="+sno+"\t"+"student name="+sname+"\t"+"class="+classs);
+    }
+}
+class Exam extends Department
+{
+    public void calattendance()
+    {
+        System.out.println("attendance="+attendence);
+    }
+    public int eligible()
+    {
+        if(attendence>75)
+        return 1;
+        else
+        return 0;
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+	{
+		Exam obj = new Exam();
+		obj.getvalue();
+		obj.getattendence();
+		obj.calattendance();
+	    if(obj.eligible()==1)
+	    {
+	        System.out.println("ELIGIBLE");
+	    }
+	    else
+	    {
+	        System.out.println("NOT ELIGIBLE");
+	    }
+	}
+}
