@@ -1,0 +1,19 @@
+package p1.testpack;
+public class Myclasstest
+{
+public void printname(String name)
+{
+System.out.println(name);
+}
+}
+package p2;
+import p1.*;
+class Myclass1
+{
+public static void main(String arg[])
+{
+String name="mounika";
+Myclass obj=new Myclass();
+obj.printname(name);
+}
+}
