@@ -6,6 +6,7 @@ public void printname(String name)
 System.out.println(name);
 }
 }
+//next..............................................................................
 package p2;
 import p1.*;
 class Myclass1
@@ -17,3 +18,114 @@ Myclass obj=new Myclass();
 obj.printname(name);
 }
 }
+//next................................................................................
+class Myclass2
+{
+public static void main(String arg[])
+{
+String name="cse";
+p1.Myclass obj=new p1.Myclass();
+obj.printname(name);
+}
+}
+//next................................................................................
+class Myclass2
+{
+public static void main(String arg[])
+{
+String name="cse";
+p1.Myclass obj=new p1.Myclass();
+obj.printname(name);
+}
+}
+//next................................................................................subpackages''
+import p1.testpack.Myclasstest;
+class Myclass3
+{
+public static void main(String arg[])
+{
+String name="cse";
+Myclasstest obj=new Myclasstest();
+obj.printname(name);
+}
+}
+//next.................................................................................
+package p1.testpack;
+public class Myclasstest
+{
+public void printname(String name)
+{
+System.out.println(name);
+}
+}
+//next.................................................................................staticimport_example''
+import static java.lang.System.*;
+class Statictest
+{
+public static void main(String arg[])
+{
+out.println("rvrjcce");
+Statictest obj=new Statictest();
+}
+}
+//next.................................................................................private example''
+class Test1
+{
+private void display()
+{
+system.out.println("hello world");
+}
+}
+//next................................................................................private example''
+class Test2
+{
+public static void main(String sarg[])
+{
+Test1 obj=new Test1();
+obj.display();//compiletime error
+}
+}
+//next...............................................................................defualt example''
+package p3;
+class Test3
+{
+void display()
+{
+System.out.println("hello world");
+}
+}
+//next.................................................................................defualt example''
+package p4;
+class Test4
+{
+public static void main(String arg[])
+{
+Test3 obj=new Test3(); //error
+obj.display();
+}
+}
+//next.................................................................................protected example''
+package p4;
+public class Test5
+{
+protected void display()
+{
+System.out.println("INDIA");
+}
+} 
+//next..................................................................................protected example''
+package p5;
+import p4.Test5;
+class Test6 extends Test5
+{
+public static void main(String arg[])
+{
+System.out.println("Bharat");
+Test6 obj=new Test6();
+obj.display();
+}
+} 
+o/p;-
+Bharat
+INDIA
+//next.....................................
